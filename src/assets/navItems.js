@@ -28,7 +28,3 @@ export { mapSeasons };
 export let timer = null;
 
 export const BASE_ANIME_API = "https://api.jikan.moe/v4";
-
-// export const GOGO_ANIME_API = 'https://gogoanime.consumet.stream/';
-
-// export const generesTypes = []
