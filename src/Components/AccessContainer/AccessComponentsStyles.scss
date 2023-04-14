@@ -1,0 +1,110 @@
+.login--title__style {
+  font-size: 2em;
+  font-weight: bolder;
+  color: white;
+  background-color: #3291e4;
+  border-bottom: 0.1em solid #3e96e3;
+  border-left: 0.1em solid #3e94de;
+  border-right: 0.1em solid #3d94e0;
+  border-bottom-right-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  left: 43%;
+  width: 10em;
+  height: 2em;
+  text-align: center;
+}
+
+.fix_margin_top {
+  margin-top: 5em;
+}
+
+.form__style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  margin: 15em 20em;
+  padding: 5em;
+  background-color: #2b2b2d;
+  border-radius: 1em;
+
+  .form__title{
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+  }
+
+  .login__form__input {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    margin: 0.5em;
+    padding: 0.5em;
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+
+    .details_label{
+      width: 50%;
+      font-size: 1em;
+    }
+
+    input {
+      border-radius: 0.5em;
+      color: black;
+      padding: 0.25em;
+      margin: 1em;
+      width: 50%;
+
+      &:focus {
+        outline: none;
+        border: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .forgot__passeord__style {
+    font-size: 1.25em;
+    position: relative;
+    left: -1%;
+    font-weight: bold;
+    text-decoration: revert;
+    text-align: right;
+  }
+
+  .login--submit--button {
+    position: relative;
+    padding: 0.5em;
+    left: -1%;
+    margin-top: 1em;
+    width: 10em;
+    font-size: 1.5em;
+    border: 0.1em solid #3291e4;
+    border-radius: 0.5em;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(50, 49, 49);
+
+    .forward--arrow{
+      visibility: hidden;
+      display: none;
+    }
+
+    &:hover {
+      background-color: #3291e4;
+      color: white;
+
+      .forward--arrow{
+        visibility: visible;
+        display: inline-block;
+      }
+    }
+
+
+  }
+}

@@ -1,0 +1,51 @@
+.bigBox__style {
+    padding: .5em;
+    height: 90%;
+    width: 90%;
+    background-color: white;
+    border-radius: 1em;
+    padding: .5em;
+    margin: .5em;
+    position: relative;
+    cursor: pointer;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 1em;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        h4 {
+            font-size: 1.5em;
+            padding: .5em;
+        }
+
+        p {
+            font-size: 1.25em;
+            padding: .5em;
+        }
+    }
+
+    &:hover .overlay {
+        opacity: 1;
+        backdrop-filter: brightness(20%);
+        border-radius: 1em;
+        border: 5px solid white;
+    }
+}

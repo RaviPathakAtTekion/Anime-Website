@@ -1,0 +1,54 @@
+.episode_container {
+    border: 5px double black;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    height: 6em;
+    width: 98%;
+    box-sizing: border-box;
+    align-items: center;
+    margin: .60em;
+    padding: .5em;
+    border-radius: 1em;
+
+    h3 {
+        font-size: 1em;
+        width: 30%;
+        border: 2px solid lightslategrey;
+        border-radius: .5em;
+        font-weight: bolder;
+        margin: .25em;
+        padding: .25em;
+    }
+
+    .episode_number{
+        font-size: 1em;
+        width: fit-content;
+        background-color: rgb(191, 189, 189);
+        border: 2px solid lightslategrey;
+        border-radius: .5em;
+        font-weight: bolder;
+        margin: .25em;
+        padding: .25em;
+    }
+
+    p {
+        font-size: 1em;
+        margin: .25em;
+        padding: .25em;
+        border: 1px solid black;
+        border-radius: .5em;
+        font-weight: bolder;
+    }
+
+    .extra_details_episodes {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+
+        p{
+            width: 100%;
+        }
+    }
+}

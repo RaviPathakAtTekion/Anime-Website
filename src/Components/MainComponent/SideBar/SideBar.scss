@@ -1,0 +1,34 @@
+.genre_title_style{
+    color: white;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    margin: .25em;
+}
+
+.sideabr_elements{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar_genres_element{
+    margin: auto;
+    width: fit-content;
+    padding: .5em;
+    color: aqua;
+
+    a{
+        font-size: 1.25em;
+    }
+
+    &:hover{
+        color: black;
+        background-color: rgb(14, 112, 215);
+        border-radius: .5em;
+        padding: 1em;
+    }
+}

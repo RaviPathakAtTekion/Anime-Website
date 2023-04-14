@@ -1,0 +1,15 @@
+.anime_extra_info_container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: column wrap;
+    padding: .5em;
+    margin: .5em;
+}
+
+.anime_production_segment{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: .5em;
+    margin: .5em;
+}

@@ -1,0 +1,60 @@
+.recommended_animes_container {
+    padding: .5em;
+    margin: .5em;
+    text-align: center;
+    height: 95%;
+    position: relative;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 1em;
+
+    &:hover{
+        cursor: pointer;
+    }
+
+    .recommended_anime_image_container {
+        width: 15em;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            border-radius: .5em;
+        }
+    }
+
+    .overlay_anime_data {
+        position: absolute;
+        // bottom: 20em;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+
+        h5 {
+            font-size: 1.5em;
+            padding: .5em;
+        }
+
+        p {
+            font-size: 1.25em;
+            padding: .5em;
+        }
+    }
+
+    &:hover .overlay_anime_data {
+        width: 100%;
+        opacity: 1;
+        backdrop-filter: brightness(25%);
+        border-radius: 1em;
+    }
+}

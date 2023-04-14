@@ -1,0 +1,112 @@
+.character_container_styles {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    height: 100%;
+    width: 90%;
+
+    .character_image_style {
+        border-radius: 1em;
+        width: 20%;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 1em;
+        }
+    }
+
+    .character_details{
+        width: 25%;
+        margin-left: .5em;
+        border-radius: 1em;
+        // background-color: white;
+
+        span{
+            font-size: 1.25em;
+            font-weight: bold;
+            color: rgb(19, 114, 222);
+            text-shadow: 1.5px 1.5px 1.5px lightblue;
+        }
+
+        h5{
+            margin: .25em;
+            font-size: 1.25em;
+            font-weight: bold;
+            padding: .25em;
+        }
+
+        p{
+            font-size: 1.25em;
+            font-weight: bold;
+            padding: .25em;
+            margin: .25em;
+        }
+
+        a{
+            font-size: 1.25em;
+            font-weight: bold;
+            padding: .5em;
+            margin: .25em;
+            background-color: aliceblue;
+            color: black;
+            border-radius: .5em;
+            box-shadow: 1px 1px 1px lightgray;
+        }
+    }
+
+    .voice_actors_container{
+        width: 50%;
+        border-radius: 1em;
+
+        h3{
+            color: black;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            // text-shadow: 2px 2px 2px lightgray;
+            background-color: rgb(182, 179, 179);
+            border-radius: 1em;
+        }
+
+        .voice_actor_display_style{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 90%;
+            
+            .voice_actor_image{
+                padding: .25em;
+                margin: .25em;
+                height: 98%;
+    
+                img{
+                    height: 100%;
+                    object-fit: contain;
+                    border-radius: 1em;  
+                    display: inline-block;  
+                }
+            }
+
+            .voice_actor_details{
+                h5{
+                    color: black;
+                    font-size: 1.25em;
+                    font-weight: bold;
+                    padding: .5em;
+                }
+
+                a{
+                    color: rgb(9, 106, 141);
+                    font-size: 1.25em;
+                    font-weight: 600;
+                    background-color: aliceblue;
+                    border-radius: .5em;
+                    margin: .5em;
+                    padding: .25em;
+                    box-shadow: 1px 1px 1px lightgray;
+                }
+            }
+        }
+    }
+}

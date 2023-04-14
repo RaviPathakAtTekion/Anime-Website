@@ -1,0 +1,39 @@
+.anime_name_container{
+    padding: .25em;
+    margin: .25em;
+    margin-top: 12em;
+
+    h1{
+        text-align: center;
+        font-size: 3em;
+        color: white;
+        font-weight: bold;
+        text-shadow: 1px 1px 1px lightgrey;
+    }
+}
+
+// span{
+//     font-size: 1.75em;
+//     text-decoration: underline;
+//     font-weight: 700;
+//     width: 70%;
+//     color: white;
+//   }
+  
+//   p{
+//     background-color: rgb(55, 54, 54);
+//     font-size: 1.25em;
+//     color: rgb(71, 143, 238);
+//     font-weight: 600;
+//     border-radius: 1em;
+//     padding: .25em;
+//     font-weight: 500;
+//     margin: .25em;
+//   }
+
+.anime_info_page_container{
+    padding: .5em;
+    margin: .5em;
+    display: flex;
+    flex-flow: column wrap;
+}

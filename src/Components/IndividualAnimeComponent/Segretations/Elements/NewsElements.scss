@@ -1,0 +1,66 @@
+.newsItem_container {
+    border: 5px double black;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    height: 12em;
+    width: 99%;
+    box-sizing: border-box;
+    margin: .25em;
+    padding: .25em;
+    border-radius: 1em;
+
+    .news_image_container {
+        margin: .5em;
+        width: 30%;
+
+        img {
+            height: 100%;
+            object-fit: contain;
+            // border-radius: 1em;
+            // border: 1px solid white;
+        }
+
+        &:hover{
+            filter: brightness(80%);
+        }
+    }
+
+    .anime_news_details{
+        width: 50%;
+        margin: .5em;
+
+        span{
+            font-size: 1.25em;
+            color: black;
+            font-weight: bold;
+        }
+
+        h5{
+            font-size: 1.10em;
+            font-weight: bold;
+            color: rgb(81, 124, 234);
+            margin: .25em;
+        }
+
+        p{
+            font-size: 1em;
+            font-weight: 600;
+            color: rgb(81, 124, 234);
+            margin: .25em;
+        }
+
+        a{
+            display: block;
+            font-weight: bold;
+            color: rgb(81, 124, 234);
+            width: fit-content;
+            margin: .25em;
+        }
+
+        .forum_link{
+            color: rgb(17, 142, 188);
+        }
+    }
+}

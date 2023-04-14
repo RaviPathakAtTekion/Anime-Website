@@ -1,0 +1,101 @@
+.anime_box_style {
+    display: flex;
+    align-items: center;
+}
+
+.anime_button_style {
+    background-color: lightslategrey;
+    border-radius: 2em;
+    height: 2em;
+    width: 2em;
+    margin: .5em;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgb(70, 69, 69);
+
+    &:hover {
+        background-color: white;
+        transform: scale(1.5);
+        transition: smooth;
+    }
+}
+
+.component_anime_style {
+    height: 30em;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+    img{
+        padding: .5em;
+        height: 99%;
+        width: 50%;
+        object-fit: cover;
+        border-radius: 1em;
+    }
+}
+
+.anime_info {
+    color: white;
+    display: flex;
+    flex-flow: column wrap;
+    width: 50%;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(64, 63, 63);
+    border-radius: 1em;
+    margin: .5em;
+
+    h4 {
+        padding: .5em;
+        font-size: 1.5em;
+        font-weight: bolder;
+        text-shadow: 2px 2px 2px rgb(152, 150, 150);
+
+        &:hover {
+            color: black;
+        }
+    }
+
+    .icon_styling {
+        width: 1em;
+        height: 1em;
+        color: lightslategrey;
+        display: inline-block;
+        margin-right: .75em;
+    }
+
+    p {
+        font-size: 1.25em;
+        font-weight: 600;
+        display: inline-block;
+        padding: .5em;
+
+    }
+
+    .score_icon {
+        width: 1em;
+        height: 1em;
+        display: inline-block;
+        margin-right: .75em;
+    }
+
+    h5 {
+        font-size: 1.25em;
+        font-weight: bolder;
+        margin: .5em;
+        text-shadow: 2px 2px 2px rgb(152, 150, 150);
+    }
+
+    ._anime_p {
+        border-radius: 1em;
+        color: black;
+    }
+
+    span{
+        background-color: rgb(248, 246, 246);
+        box-shadow: 1px 1px 1px white;
+        border: .5em;
+        color: black;
+        border-radius: .5em;
+        margin: .5em;
+    }
+}

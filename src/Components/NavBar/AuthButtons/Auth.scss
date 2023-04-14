@@ -1,0 +1,31 @@
+.access--application__styles{
+    padding: .5em;
+    margin: .5em;
+}
+
+.auth--button__style{
+    font-size: 1.25em;
+    color: white;
+    border: 1px solid black;
+    border-radius: .5em;
+    padding: .50em;
+    margin: 0em 2em;
+    font-weight: bold;
+
+    &:hover{
+        background-color: #3291e4;
+        border-radius: .5em;
+        color: black;
+        border: 1px solid rgb(65, 110, 120);
+    }
+}
+
+.userData_style{
+    background-color: #3291e4;
+    border: 2px solid black;
+    border-radius: .5em;
+    padding: .25em;
+    font-size: 1.5em;
+    font-weight: bold;
+    box-shadow: 1px 1px 1px rgb(123, 185, 206);
+}

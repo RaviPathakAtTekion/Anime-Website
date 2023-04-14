@@ -1,0 +1,29 @@
+.navItem__style {
+    padding: 0.4em 1em 0.4em 0;
+    margin: 0em 1em;
+    font-size: 1.25em;
+    flex-grow: 1;
+    font-weight: bold;
+    color: white;
+    border: 2px solid transparent;
+
+    &:hover {
+        background-color: #3291e4;
+        border: 2px solid #349bf5;
+        color: black;
+        border-radius: .5em;
+    }
+}
+
+.icons__style{
+    display: inline-block;
+    width: 3em;
+    height: 2em;
+    padding: 0;
+    margin: 0;
+    color: white;
+
+    :active{
+        color: black;
+    }
+}

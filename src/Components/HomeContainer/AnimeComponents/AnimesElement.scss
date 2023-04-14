@@ -1,0 +1,31 @@
+.animes_container_style {
+    width: 45%;
+    // display: flex;
+    // justify-content: center;
+    // flex-flow: row wrap;
+    // align-items: center;
+    background-color: #1f2024;
+    border-radius: 1em;
+}
+
+.animes_title_style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    color: white;
+
+    svg{
+        height: 2em;
+        width: 2em;
+        margin: .25em;
+        color: rgb(151, 56, 220);
+    }
+
+    h4 {
+        font-size: 1.5em;
+        font-weight: bold;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+}

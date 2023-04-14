@@ -1,0 +1,44 @@
+.toggle_content_button_container {
+    margin: 0.5em;
+    border-radius: 1em;
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
+    font-weight: bold;
+    height: 3em;
+
+    .toggle_buttons_style {
+        padding: 1em;
+        font-weight: bold;
+        border-radius: 1em;
+        font-size: 1em;
+        background-color: lightgrey;
+        border: 1px solid black;
+        color: black;
+        text-shadow: .5px .5px .5px black;
+
+        &:hover{
+            background-color: transparent;
+        }
+    }
+}
+
+.search_items_main_container{
+    display: flex;
+    flex-direction: row;
+    // height: 95em;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.no_data_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2{
+        font-size: 2em;
+        font-weight: bold;
+        color: white;
+    }
+}

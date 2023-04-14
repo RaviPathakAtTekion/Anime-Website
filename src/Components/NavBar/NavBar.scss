@@ -1,0 +1,23 @@
+.navBar__styles {
+    border-radius: .5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f2024;
+}
+
+.navItems__styles {
+    padding: .5em;
+    margin: .5em;
+}
+
+
+nav a.active {
+    background-color: #3291e4;
+    border-radius: .5em;
+    color: black;
+
+    img{
+        color: black;
+    }
+}
