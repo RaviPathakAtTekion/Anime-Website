@@ -1,28 +1,60 @@
+.anime_big_box_container_style {
+    width: 100%;
+    height: 90%;
+    position: relative;
+}
 
-.anime_big_box_style{
+.anime_big_box_style {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    // display: grid;
-    // grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    height: 100%;
     width: 100%;
-    height: 90%;
 }
 
-.nav_button_style{
-    background-color: lightslategrey;
+.nav_button_style {
+    // background-color: lightslategrey;
     border-radius: 1em;
-    height: 5em;
+    height: 4em;
     align-self: center;
-    width: 10em;
+    position: absolute;
+    z-index: 1;
+    width: 4em;
     margin: .5em;
     cursor: pointer;
-    box-shadow: 2px 2px 2px rgb(70, 69, 69);
+    // box-shadow: 2px 2px 2px rgb(70, 69, 69);
 
-    &:hover{
-        background-color: white;
-        transform: scale(1.5);
+    &:hover {
+        background-color: rgb(181, 179, 179);
+        transform: scale(1.1);
         transition: smooth;
     }
 }
 
+.prev {
+    left: 0em;
+    top: 15em;
+}
+
+.next {
+    right: 0em;
+    top: 15em;
+}
+
+.component_rendering_style {
+    opacity: 0;
+}
+
+.component_rendering_style-active {
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
+.component_rendering_style-exit {
+    opacity: 1;
+}
+
+.component_rendering_styleexit-active {
+    opacity: 0;
+    transition: opacity 500ms;
+}

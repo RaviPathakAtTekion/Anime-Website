@@ -3,6 +3,7 @@ import SideBarOptionsElements from "./SideBarOptionsElements.jsx";
 
 import "./SidebarSeasons.scss";
 
+// sidebar seasons mapper component
 function SidebarSeasons({ seasons, getSeason }) {
 
   return (

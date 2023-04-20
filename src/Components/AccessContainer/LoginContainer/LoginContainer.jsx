@@ -4,14 +4,18 @@ import "../AccessComponentsStyles.scss";
 
 function LoginContainer() {
   const navigate = useNavigate();
+
+  // data Access on button click with form
   const handleUserLoginDetails = (e) => {
     e.preventDefault();
 
     const form = e.target;
     const formData = new FormData(form);
 
+    // json data from form 
     const formJson = Object.fromEntries(formData.entries());
 
+    // set data of user in session storage 
     window.sessionStorage.setItem(
       "userDetails",
       JSON.stringify({
@@ -19,6 +23,8 @@ function LoginContainer() {
         password: formJson.login_password,
       })
     );
+
+    // navigate to home page
     navigate("/");
   };
 

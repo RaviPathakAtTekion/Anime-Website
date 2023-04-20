@@ -5,14 +5,17 @@ import "../AccessComponentsStyles.scss";
 function SignUpContainer() {
   const navigate = useNavigate();
 
+  // data Access on button click with form
   const handleUserSignUpDetails = (e) => {
     e.preventDefault();
 
     const form = e.target;
     const formData = new FormData(form);
 
+    // json data from form 
     const formJson = Object.fromEntries(formData.entries());
 
+    // check password and confirm password is same
     if (formJson.signup_password === formJson.signup_confirm_password) {
       window.sessionStorage.setItem(
         "userDetails",
@@ -21,9 +24,13 @@ function SignUpContainer() {
           password: formJson.signup_password,
         })
       );
+
+      // navigate to home page after signup
       navigate("/");
+
     } else {
       alert("password and confirm password are different");
+      // recheck password alert
     }
   };
   return (

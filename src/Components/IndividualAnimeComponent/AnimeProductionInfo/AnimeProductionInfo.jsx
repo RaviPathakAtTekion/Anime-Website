@@ -2,40 +2,40 @@ import AnimeExtraInfoContainerCharacter from "./AnimeExtraInfoContainer/AnimeExt
 import AnimeExtraInfoContainerEpisodes from "./AnimeExtraInfoContainer/AnimeExtraInfoContainerEpisodes";
 import AnimeExtraInfoContainerNews from "./AnimeExtraInfoContainer/AnimeExtraInfoContainerNews";
 import AnimeExtraInfoContainerRecommendations from "./AnimeExtraInfoContainer/AnimeExtraInfoContainerRecommendations";
+import AnimeContext from "../../AnimeContext";
+
 import "./AnimeProductionInfo.scss";
 
 function AnimeProductionInfo({ animeContent, type }) {
   const animeId = animeContent.mal_id;
-  
+
   return (
-    <div className="anime_extra_info_container">
-      <div className="anime_production_segment">
-        <AnimeExtraInfoContainerCharacter
-          animeId={animeId}
-          delay={0}
-          type={type}
-        />
-        {type === "manga" ? (
-          ""
-        ) : (
-          <AnimeExtraInfoContainerEpisodes
+    <AnimeContext.Provider value={animeContent}>
+      <div className="anime_extra_info_container">
+        <div className="anime_production_segment">
+          <AnimeExtraInfoContainerCharacter
             animeId={animeId}
-            delay={100}
             type={type}
           />
-        )}
-        <AnimeExtraInfoContainerNews
-          animeId={animeId}
-          delay={2000}
-          type={type}
-        />
-        <AnimeExtraInfoContainerRecommendations
-          animeId={animeId}
-          delay={3000}
-          type={type}
-        />
+          {type === "manga" ? (
+            ""
+          ) : (
+            <AnimeExtraInfoContainerEpisodes
+              animeId={animeId}
+              type={type}
+            />
+          )}
+          <AnimeExtraInfoContainerNews
+            animeId={animeId}
+            type={type}
+          />
+          <AnimeExtraInfoContainerRecommendations
+            animeId={animeId}
+            type={type}
+          />
+        </div>
       </div>
-    </div>
+    </AnimeContext.Provider>
   );
 }
 

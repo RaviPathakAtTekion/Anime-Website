@@ -1,39 +1,27 @@
-import { useState, useEffect, Fragment } from "react";
-import axios from "axios";
-import { BASE_ANIME_API } from "../../../../assets/navItems.js";
+import { Fragment } from "react";
 import Recommendations from "../../Segretations/Recommendations.jsx";
+import ClassLoaderMini from "../../../ClassLoader/ClassLoaderMini.jsx";
+import { GetAnimeSpecificRecommendationsData } from "./AnimeSpecificDataFetcher.jsx";
 
 import "./AnimeExtraInfoContainer.scss";
-import ClassLoaderMini from "../../../ClassLoader/ClassLoaderMini.jsx";
+import ErrorMessage from "../../../ErrorOccurredComponent/ErrorMessage.jsx";
 
 function AnimeExtraInfoContainerRecommendations({ animeId, delay, type }) {
-  const [data, setData] = useState({ state: "pending" });
-
-  const getAnimeRecommendations = async () => {
-    axios
-      .get(BASE_ANIME_API + `/${type}` + `/${animeId}` + `/recommendations`)
-      .then((response) => {
-        setData({ state: "ok", response });
-      })
-      .catch((error) => console.log("error occured"));
-  };
-
-  useEffect(() => {
-    setTimeout(() => {
-      getAnimeRecommendations();
-    }, delay);
-  }, [animeId]);
-
+  const { recommendationsLoading, recommendationsData, recommendationsError } =
+    GetAnimeSpecificRecommendationsData(animeId, type);
+    
   return (
     <Fragment>
-      {data.state === "ok" ? (
-        data.response.data.data.length !== 0 ? (
-          <div className="anime_extra_info_segment_parts">
-            <Recommendations recommendations={data.response.data.data} />
-          </div>
-        ) : (
-          ""
-        )
+      {recommendationsError === null &&
+      !recommendationsLoading &&
+      recommendationsData.length !== 0 ? (
+        <div className="anime_extra_info_segment_parts">
+          <Recommendations recommendations={recommendationsData} />
+        </div>
+      ) : recommendationsError !== null ? (
+        <ErrorMessage />
+      ) : recommendationsData.length === 0 ? (
+        ""
       ) : (
         <ClassLoaderMini />
       )}

@@ -1,0 +1,16 @@
+.error_message_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h2{
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    p{
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+}

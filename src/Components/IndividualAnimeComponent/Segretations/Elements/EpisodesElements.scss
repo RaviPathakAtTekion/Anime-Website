@@ -31,6 +31,12 @@
         font-weight: bolder;
         margin: .25em;
         padding: .25em;
+        
+        &:hover{
+            cursor: pointer;
+            background-color: rgb(86, 86, 86);
+            color: white;
+        }
     }
 
     p {

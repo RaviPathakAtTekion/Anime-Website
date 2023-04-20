@@ -7,11 +7,11 @@ import {
 } from "./BigThreeData";
 
 const getData = (animeIndex) => {
-  const onePieceData = useSelector((state) => state.onePieceData.data);
-  const narutoData = useSelector((state) => state.narutoData.data);
-  const bleachData = useSelector((state) => state.bleachData.data);
-  const loading = useSelector((state) => state.loading);
-  const error = useSelector((state) => state.error);
+  const onePieceData = useSelector((state) => state.animeData.onePieceData.data);
+  const narutoData = useSelector((state) => state.animeData.narutoData.data);
+  const bleachData = useSelector((state) => state.animeData.bleachData.data);
+  const loading = useSelector((state) => state.animeData.loading);
+  const error = useSelector((state) => state.animeData.error);
   const dispatch = useDispatch();
 
   useEffect(() => {

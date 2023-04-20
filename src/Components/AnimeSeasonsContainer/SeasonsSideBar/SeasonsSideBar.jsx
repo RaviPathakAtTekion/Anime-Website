@@ -6,9 +6,13 @@ import SidebarSeasons from "./SidebarSeasons/SidebarSeasons.jsx";
 import "./SeasonsSideBar.scss";
 import ClassLoaderMini from "../../ClassLoader/ClassLoaderMini.jsx";
 
+// seasons sidebar container
 function SeasonsSideBar({getSeason}) {
+  
+  // state to get api data
   const [seasonsList, setSeasonsList] = useState({state: "pending"});
 
+  // api call fuction
   const getSeasonsList = async () => {
     axios
       .get(BASE_ANIME_API + "/seasons")
@@ -18,6 +22,7 @@ function SeasonsSideBar({getSeason}) {
       .catch((error) => console.log("error occured"));
   };
 
+  // calling api function in useeffect (initial rendering), with zero dependency
   useEffect(() => {
     getSeasonsList();
   }, []);

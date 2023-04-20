@@ -1,39 +1,27 @@
-import { useState, useEffect, Fragment } from "react";
-import axios from "axios";
-import { BASE_ANIME_API } from "../../../../assets/navItems.js";
-
-import "./AnimeExtraInfoContainer.scss";
+import { Fragment } from "react";
+import { GetAnimeSpecificNewsData } from "./AnimeSpecificDataFetcher.jsx";
 import News from "../../Segretations/News.jsx";
 import ClassLoaderMini from "../../../ClassLoader/ClassLoaderMini.jsx";
 
-function AnimeExtraInfoContainerNews({ animeId, delay, type }) {
-  const [data, setData] = useState({ state: "pending" });
+import "./AnimeExtraInfoContainer.scss";
+import ErrorMessage from "../../../ErrorOccurredComponent/ErrorMessage.jsx";
 
-  const getAnimeNews = async () => {
-    axios
-      .get(BASE_ANIME_API + `/${type}` + `/${animeId}` + `/news`)
-      .then((response) => {
-        setData({ state: "ok", response });
-      })
-      .catch((error) => console.log("error occured"));
-  };
-
-  useEffect(() => {
-    setTimeout(() => {
-      getAnimeNews();
-    }, delay);
-  }, [animeId]);
+function AnimeExtraInfoContainerNews({ animeId, type }) {
+  const { newsLoading, newsData, newsError } = GetAnimeSpecificNewsData(
+    animeId,
+    type
+  );
 
   return (
     <Fragment>
-      {data.state === "ok" ? (
-        data.response.data.data.length !== 0 ? (
-          <div className="anime_extra_info_segment_parts">
-            <News news={data.response.data.data} />
-          </div>
-        ) : (
-          ""
-        )
+      {newsData.length !== 0 && newsError === null && !newsLoading ? (
+        <div className="anime_extra_info_segment_parts">
+          <News news={newsData} />
+        </div>
+      ) : newsError !== null ? (
+        <ErrorMessage />
+      ) : newsData.length === 0 ? (
+        ""
       ) : (
         <ClassLoaderMini />
       )}

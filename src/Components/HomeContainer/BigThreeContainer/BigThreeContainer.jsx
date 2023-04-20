@@ -6,6 +6,7 @@ import { GrFormNext } from "react-icons/gr";
 import { GrFormPrevious } from "react-icons/gr";
 
 import "./BigThreeContainer.scss";
+import ErrorMessage from "../../ErrorOccurredComponent/ErrorMessage.jsx";
 
 function BigThreeContainer() {
   const [animeIndex, setAnimeIndex] = useState(1);
@@ -29,12 +30,14 @@ function BigThreeContainer() {
       <div className="BigThreeContainer_title">
         <h2>The Big Three</h2>
       </div>
-      {loading === false && data.length !== 0 ? (
+      {!loading && data.length !== 0 && error === null ? (
         <div className="BigThree_main_container">
           <GrFormPrevious className="anime_button_style" onClick={prevAnime} />
           <BigThreeContainerElementsBox animeData={data} />
           <GrFormNext className="anime_button_style" onClick={nextAnime} />
         </div>
+      ) : error !== null ? (
+        <ErrorMessage />
       ) : (
         <ClassLoaderMini />
       )}

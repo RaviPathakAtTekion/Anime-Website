@@ -3,13 +3,18 @@ import "./AnimeBoxStyle.scss";
 
 function AnimeBigBox({ animeDetail }) {
   const navigate = useNavigate();
-  
+
   const handleMoveToAnimePage = (content) => {
-    navigate(`/anime/${content.mal_id}`, { state: {content: content, type: "anime"}});
+    navigate(`/anime/${content.mal_id}`, {
+      state: { content: content, type: "anime" },
+    });
   };
 
   return (
-    <div className="bigBox__style" onClick={() => handleMoveToAnimePage(animeDetail)}>
+    <div
+      className="bigBox__style"
+      onClick={() => handleMoveToAnimePage(animeDetail)}
+    >
       <img
         src={animeDetail.images.webp.image_url}
         alt={animeDetail.title}

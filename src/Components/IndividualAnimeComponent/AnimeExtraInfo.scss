@@ -1,21 +1,21 @@
-.anime_data_container{
+.anime_data_container {
     display: flex;
     flex-direction: row;
     border-radius: .5em;
 }
 
-.larger_button{
+.larger_button {
     width: 2.5em;
     height: 3.5em;
     background-color: rgb(235, 239, 243);
     transform: scale(1.25);
 
-    &:hover{
+    &:hover {
         background-color: rgb(34, 127, 220);
     }
 }
 
-.anime_specific_title{
+.anime_specific_title {
     font-size: 1.5em;
     font-weight: bold;
     color: white;
@@ -27,21 +27,21 @@
     margin: 0em;
 }
 
-.anime_characters_container{
-   padding: .5em;
-   margin: .5em;
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: space-between;
-   height: 90%;
+.anime_characters_container {
+    padding: .5em;
+    margin: .5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 90%;
 }
 
-.anime_news_container{
+.anime_news_container {
     height: 100%;
 }
 
-.anime_news_inside_container{
+.anime_news_inside_container {
     overflow-x: scroll;
     display: flex;
     flex-direction: column;
@@ -49,37 +49,55 @@
     width: 100%;
 }
 
-.anime_episodes_container{
+.anime_episodes_container {
     height: 100%;
 }
 
-.anime_episodes_inside_container{
+.anime_episodes_inside_container {
     overflow-x: scroll;
     display: flex;
     flex-direction: column;
     height: 90%;
     width: 100%;
 
-    .total_episodes{
-        font-size: 1.25em;
-        font-weight: bold;
-        background-color: white;
-        color: black;
-        width: auto;
-        margin-top: .5em;
-        border-radius: .25em;
-        text-align: center;
-        position: sticky;
-        top: 0em;
-        left: 30em;
+    .title_button_ep_style {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        align-items: center;
+
+        .ep_navigation_button {
+            width: 2.5em;
+            height: 2.5em;
+            z-index: 1;
+            border-radius: 1em;
+            padding: .25em;
+            margin: .25em;
+
+            &:hover {
+                cursor: pointer;
+                background-color: rgb(54, 52, 52);
+            }
+        }
+
+        .total_episodes {
+            flex-grow: 1;
+            font-size: 1.25em;
+            font-weight: bold;
+            background-color: white;
+            color: black;
+            width: auto;
+            border-radius: .25em;
+            text-align: center;
+        }
     }
 }
 
-.recommendation_anime_container{
+.recommendation_anime_container {
     height: 100%;
 }
 
-.total_recommendations{
+.total_recommendations {
     font-size: 1.25em;
     font-weight: bold;
     margin-top: .5em;
@@ -91,7 +109,7 @@
     position: sticky;
 }
 
-.anime_recommendations_inside_container{
+.anime_recommendations_inside_container {
     overflow-y: scroll;
     display: flex;
     justify-content: space-between;

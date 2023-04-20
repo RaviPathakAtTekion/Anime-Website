@@ -1,31 +1,24 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useState } from "react";
 
-import "./MainComponent.scss";
 import SideBar from "./SideBar/SideBar";
 import DetailsContent from "./DetailsContent/DetailsContent";
 import ClassLoaderMini from "../ClassLoader/ClassLoaderMini";
 import ClassLoaderMajor from "../ClassLoader/ClassLoaderMajor";
 import GenresData from "./GenresData";
+import AnimeApiCallByType from "./AnimeApiCallByType";
+
+import "./MainComponent.scss";
+import ErrorMessage from "../ErrorOccurredComponent/ErrorMessage";
 
 function MainComponent({ DetailsAPI, type, apiType }) {
-  const [data, setData] = useState({ state: "pending" });
   const [currentPage, setCurrentPage] = useState(1);
-
   const { loading, genres, error } = GenresData();
 
-  const getAPIData = async (page) => {
-    axios
-      .get(DetailsAPI, { params: { type: apiType, page: page } })
-      .then((response) => {
-        setData({ state: "ok", response });
-      })
-      .catch((error) => console.log("error occured"));
-  };
-
-  useEffect(() => {
-    getAPIData(currentPage);
-  }, [currentPage]);
+  const { animeLoading, contentData, animeError } = AnimeApiCallByType(
+    DetailsAPI,
+    apiType,
+    currentPage
+  );
 
   const nextPageContent = (lastIndex) => {
     setCurrentPage((prevPage) => {
@@ -41,24 +34,28 @@ function MainComponent({ DetailsAPI, type, apiType }) {
 
   return (
     <div className="main_container">
-      {genres.length > 0 ? (
+      {genres.length !== 0 && error === null && !loading ? (
         <div className="genres_sidebar_container">
           <SideBar genres={genres} />
         </div>
+      ) : error !== null ? (
+        <ErrorMessage />
       ) : (
         <ClassLoaderMini />
       )}
-      {data.state === "ok" ? (
+      {contentData.length !== 0 && !loading && error === null ? (
         <div className="details_container">
           <DetailsContent
-            data={data.response.data.data}
+            data={contentData.data}
             type={type}
             nextPageContent={() =>
-              nextPageContent(data.response.data.pagination)
+              nextPageContent(contentData.pagination.last_visible_page)
             }
             prevPageContent={prevPageContent}
           />
         </div>
+      ) : animeError !== null ? (
+        <ErrorMessage />
       ) : (
         <ClassLoaderMajor />
       )}

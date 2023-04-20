@@ -1,42 +1,28 @@
-import { useState, useEffect, Fragment } from "react";
-import axios from "axios";
-import { BASE_ANIME_API } from "../../../../assets/navItems.js";
-
-import "./AnimeExtraInfoContainer.scss";
+import { Fragment } from "react";
+// import { useEffect } from "react";
 import Characters from "../../Segretations/Characters.jsx";
 import ClassLoaderMini from "../../../ClassLoader/ClassLoaderMini.jsx";
 
-function AnimeExtraInfoContainerCharacter({ animeId, delay, type }) {
-  const [data, setData] = useState({ state: "pending" });
+import "./AnimeExtraInfoContainer.scss";
+import { GetAnimeSpecificCharactersData } from "./AnimeSpecificDataFetcher.jsx";
+import ErrorMessage from "../../../ErrorOccurredComponent/ErrorMessage.jsx";
 
-  const getAnimeCharacters = async () => {
-    axios
-      .get(BASE_ANIME_API + `/${type}` + `/${animeId}` + `/characters`)
-      .then((response) => {
-        setData({ state: "ok", response });
-      })
-      .catch((error) => {
-        console.log("error occured");
-        setData({ state: "error" });
-      });
-  };
-
-  useEffect(() => {
-    setTimeout(() => {
-      getAnimeCharacters();
-    }, delay);
-  }, [animeId]);
+function AnimeExtraInfoContainerCharacter({ animeId, type }) {
+  const { charactersLoading, charactersData, charactersError } =
+    GetAnimeSpecificCharactersData(animeId, type);
 
   return (
     <Fragment>
-      {data.state !== "error" && data.state === "ok"  ? (
-        data.response.data.data.length !== 0 ? (
-          <div className="anime_extra_info_segment_parts">
-            <Characters characters={data.response.data.data} />
-          </div>
-        ) : (
-          ""
-        )
+      {charactersData.length !== 0 &&
+      charactersError === null &&
+      !charactersLoading ? (
+        <div className="anime_extra_info_segment_parts">
+          <Characters characters={charactersData} />
+        </div>
+      ) : charactersError !== null ? (
+        <ErrorMessage />
+      ) : charactersData.length === 0 ? (
+        ""
       ) : (
         <ClassLoaderMini />
       )}

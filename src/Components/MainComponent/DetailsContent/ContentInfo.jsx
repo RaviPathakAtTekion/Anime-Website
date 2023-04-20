@@ -1,9 +1,13 @@
 import "../DetailsContent/DetailsContent.scss";
 import { useNavigate } from "react-router-dom";
 
+// anime display content inner child component 
 function ContentInfo({ content, type }) {
+
+  // navigation hook
   const navigate = useNavigate();
 
+  // check anime content type and change its parameter
   const handleNavigateToInfoPage = (content) => {
     let typeContent = type;
     if (type === "Anime") {
@@ -14,6 +18,7 @@ function ContentInfo({ content, type }) {
       typeContent = "anime";
     }
 
+    // navigate to anime page with content of anime and its type
     navigate(`/anime/${content.mal_id}`, {
       state: { content: content, type: typeContent },
     });

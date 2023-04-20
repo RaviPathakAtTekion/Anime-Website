@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 
 import AnimeBoxComponent from "./TopAnimeComponent/AnimeComponent.jsx";
-import { GrFormNext } from "react-icons/gr";
-import { GrFormPrevious } from "react-icons/gr";
+import { PrevButton, NextButton } from "../../../../../assets/navItems.js";
 import "./AnimeBox.scss";
 
 function AnimeBox({animesDetails, InfoImage}) {
@@ -23,9 +22,9 @@ function AnimeBox({animesDetails, InfoImage}) {
 
   return (
     <div className="anime_box_style">
-      <GrFormPrevious className="anime_button_style" onClick={handlePrevClick}/>
+      <PrevButton className="anime_button_style" onClick={handlePrevClick}/>
       <AnimeBoxComponent animeDetails={animesDetails[topAnimepageCount]} InfoImage={InfoImage}/>
-      <GrFormNext className="anime_button_style" onClick={handleNextClick}/>
+      <NextButton className="anime_button_style" onClick={handleNextClick}/>
     </div>
   );
 }

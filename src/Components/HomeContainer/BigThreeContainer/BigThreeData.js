@@ -80,3 +80,25 @@ export const fetchGenresData = () => {
       });
   };
 };
+
+const AIRING_ANIME_API = BASE_ANIME_API + "/top/anime";
+
+export const fetchAiringAnimes = () => {
+  return (dispatch) => {
+    dispatch({ type: "FETCH_DATA_REQUEST" });
+    axios
+      .get(AIRING_ANIME_API, { params: { filter: "airing" } })
+      .then((response) => {
+        dispatch({
+          type: "FETCH_AIRING_ANIMES_SUCCESS",
+          payload: response.data,
+        });
+      })
+      .catch((error) => {
+        dispatch({
+          type: "FETCH_DATA_FAILURE",
+          payload: error.message,
+        });
+      });
+  };
+};

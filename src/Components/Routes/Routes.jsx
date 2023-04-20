@@ -8,6 +8,7 @@ import MangaContainer from "../MangaContainer/MangaContainer.jsx";
 import SeasonsContainer from "../SeasonsContainer/SeasonsContainer.jsx";
 import IndividualAnimeComponent from "../IndividualAnimeComponent/IndividualAnimeComponent.jsx";
 import SearchComponent from "../SearchComponent/SearchComponent.jsx";
+import DownloadAnimes from "../DownloadAnimes/DownloadAnimes.jsx";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
     path: "/search",
     element: <SearchComponent />,
   },
+  {
+    path: "/download",
+    element: <DownloadAnimes />
+  }
 ]);
 
 export default router;

@@ -2,7 +2,7 @@ import "../AnimeExtraInfo.scss";
 import RecommendationsElements from "./Elements/RecommendationsElements";
 
 function Recommendations({ recommendations }) {
-
+  
   return (
     <div className="recommendation_anime_container">
       <h2 className="anime_specific_title">Recommendations</h2>

@@ -1,29 +1,13 @@
-import { useEffect, useState } from "react";
 import { FaNewspaper } from "react-icons/fa";
-import axios from "axios";
 import AnimeBoxComponent from "./AnimeBoxComponent/AnimeBoxComponent.jsx";
-import { BASE_ANIME_API } from "../../../../assets/navItems.js";
-
-import "../AnimesElement.scss";
 import ClassLoaderMajor from "../../../ClassLoader/ClassLoaderMajor.jsx";
+import ErrorMessage from "../../../ErrorOccurredComponent/ErrorMessage.jsx";
+import AiringAnimesData from "./AiringAnimesApiCall.jsx";
+import "../AnimesElement.scss";
 
+// top anime airing container component
 function TopAiringAnimes() {
-  const [animesDetails, setAnimesDetails] = useState({ state: "pending" });
-  const topAiring = "/top/anime";
-  const filter = "?filter=airing";
-
-  const getAiringAnimeDetails = async () => {
-    axios
-      .get(BASE_ANIME_API + topAiring + filter)
-      .then((response) => {
-        setAnimesDetails({ state: "ok", response });
-      })
-      .catch((error) => console.log("error occured"));
-  };
-
-  useEffect(() => {
-    getAiringAnimeDetails();
-  }, []);
+  const { loading, airingAnimes, error } = AiringAnimesData();
 
   return (
     <div className="specific_anime__container" style={{ flexGrow: 1 }}>
@@ -31,8 +15,12 @@ function TopAiringAnimes() {
         <FaNewspaper />
         <h4>Top Airing</h4>
       </div>
-      {animesDetails.state === "ok" ? (
-        <AnimeBoxComponent animesDetails={animesDetails.response.data} />
+      {!loading && airingAnimes.length !== 0 && error === null ? (
+        <AnimeBoxComponent animesDetails={airingAnimes} />
+      ) : error !== null ? (
+        <div className="error_container_outer">
+          <ErrorMessage />
+        </div>
       ) : (
         <ClassLoaderMajor />
       )}

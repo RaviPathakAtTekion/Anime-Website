@@ -1,9 +1,9 @@
 import ContentInfo from "./ContentInfo.jsx";
-import { GrFormNext } from "react-icons/gr";
-import { GrFormPrevious } from "react-icons/gr";
+import { PrevButton, NextButton } from "../../../assets/navItems.js";
 
 import "./DetailsContent.scss";
 
+// anime content display container component
 function DetailsContent({ data, type, nextPageContent, prevPageContent }) {
   
   return (
@@ -15,8 +15,8 @@ function DetailsContent({ data, type, nextPageContent, prevPageContent }) {
         ))}
       </div>
       <div className="container_buttons_style">
-        <GrFormPrevious className="navContent_button_style" onClick={prevPageContent} />
-        <GrFormNext className="navContent_button_style" onClick={nextPageContent} />
+        <PrevButton className="navContent_button_style" onClick={prevPageContent} />
+        <NextButton className="navContent_button_style" onClick={nextPageContent} />
       </div>
     </div>
   );

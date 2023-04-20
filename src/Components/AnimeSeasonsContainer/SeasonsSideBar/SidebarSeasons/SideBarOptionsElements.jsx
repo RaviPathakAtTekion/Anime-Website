@@ -5,9 +5,13 @@ import { mapSeasons } from "../../../../assets/navItems.js";
 
 import "../SidebarSeasons/SidebarSeasons.scss";
 
+// season sidebar component individual elements component
 function SideBarOptionsElements({ season, getSeason }) {
+  
+  // show options on click state
   const [showOptions, setShowOptions] = useState(false);
 
+  // show options function 
   const handleShowOptions = (season) => {
     setShowOptions((prevState) => {
       return prevState ? (prevState = false) : (prevState = true);

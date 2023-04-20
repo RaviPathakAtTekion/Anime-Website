@@ -7,14 +7,15 @@ import Header from "../HomeContainer/HeaderItems/Header.jsx";
 import Footer from "../Footer/Footer.jsx";
 
 function AnimesContainer() {
-  const MovieAPI = BASE_ANIME_API + "/top/anime";
+  // api type to fetch
+  const AnimeAPI = BASE_ANIME_API + "/top/anime";
 
   return (
     <Fragment>
       <Header />
       <div className="movies_container">
         <MainComponent
-          DetailsAPI={MovieAPI}
+          DetailsAPI={AnimeAPI}
           type={"Anime"}
           apiType={"tv"}
         />
