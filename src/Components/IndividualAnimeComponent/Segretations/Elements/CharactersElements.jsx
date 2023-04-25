@@ -20,7 +20,6 @@ function CharactersElements({ character }) {
         </h5>
         <h5>
           <span>Role </span>- {character.role}
-          favorites
         </h5>
         {character?.favorites ? (
           <p>

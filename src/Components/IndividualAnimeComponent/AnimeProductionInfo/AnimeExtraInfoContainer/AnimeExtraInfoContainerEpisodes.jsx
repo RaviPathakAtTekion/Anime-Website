@@ -1,10 +1,10 @@
 import { useState, Fragment } from "react";
 
-import "./AnimeExtraInfoContainer.scss";
 import Episodes from "../../Segretations/Episodes.jsx";
 import ClassLoaderMini from "../../../ClassLoader/ClassLoaderMini.jsx";
 import { GetAnimeSpecificEpisodesData } from "./AnimeSpecificDataFetcher";
 import ErrorMessage from "../../../ErrorOccurredComponent/ErrorMessage";
+import "./AnimeExtraInfoContainer.scss";
 
 function AnimeExtraInfoContainerEpisodes({ animeId, type }) {
   const [mouseHover, setMouseHover] = useState(false);

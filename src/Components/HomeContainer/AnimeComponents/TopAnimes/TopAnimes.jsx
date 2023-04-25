@@ -3,9 +3,9 @@ import { useEffect, useState } from "react";
 import { BASE_ANIME_API } from "../../../../assets/navItems.js";
 import AnimeBox from "./TopAnimeBox/AnimeBox.jsx";
 import { AiFillFire } from "react-icons/ai";
+import ClassLoaderMini from "../../../ClassLoader/ClassLoaderMini.jsx";
 
 import "../AnimesElement.scss";
-import ClassLoaderMini from "../../../ClassLoader/ClassLoaderMini.jsx";
 
 function TopAnimes({ BsLaptop }) {
   const type = "/top/anime";

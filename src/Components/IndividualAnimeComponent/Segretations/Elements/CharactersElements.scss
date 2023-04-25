@@ -8,6 +8,7 @@
     .character_image_style {
         border-radius: 1em;
         width: 20%;
+
         img {
             height: 100%;
             width: 100%;
@@ -16,34 +17,34 @@
         }
     }
 
-    .character_details{
+    .character_details {
         width: 25%;
         margin-left: .5em;
         border-radius: 1em;
         // background-color: white;
 
-        span{
+        span {
             font-size: 1.25em;
             font-weight: bold;
             color: rgb(19, 114, 222);
             text-shadow: 1.5px 1.5px 1.5px lightblue;
         }
 
-        h5{
+        h5 {
             margin: .25em;
             font-size: 1.25em;
             font-weight: bold;
             padding: .25em;
         }
 
-        p{
+        p {
             font-size: 1.25em;
             font-weight: bold;
             padding: .25em;
             margin: .25em;
         }
 
-        a{
+        a {
             font-size: 1.25em;
             font-weight: bold;
             padding: .5em;
@@ -55,11 +56,11 @@
         }
     }
 
-    .voice_actors_container{
+    .voice_actors_container {
         width: 50%;
         border-radius: 1em;
 
-        h3{
+        h3 {
             color: black;
             font-size: 1.5em;
             font-weight: bold;
@@ -69,34 +70,34 @@
             border-radius: 1em;
         }
 
-        .voice_actor_display_style{
+        .voice_actor_display_style {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
             height: 90%;
-            
-            .voice_actor_image{
+
+            .voice_actor_image {
                 padding: .25em;
                 margin: .25em;
                 height: 98%;
-    
-                img{
+
+                img {
                     height: 100%;
                     object-fit: contain;
-                    border-radius: 1em;  
-                    display: inline-block;  
+                    border-radius: 1em;
+                    display: inline-block;
                 }
             }
 
-            .voice_actor_details{
-                h5{
+            .voice_actor_details {
+                h5 {
                     color: black;
                     font-size: 1.25em;
                     font-weight: bold;
                     padding: .5em;
                 }
 
-                a{
+                a {
                     color: rgb(9, 106, 141);
                     font-size: 1.25em;
                     font-weight: 600;
@@ -105,6 +106,156 @@
                     margin: .5em;
                     padding: .25em;
                     box-shadow: 1px 1px 1px lightgray;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .character_container_styles {
+        flex-direction: row;
+
+        .character_image_style {
+            width: 25%;
+        }
+
+        .character_details {
+            width: 30%;
+
+            span {
+                font-size: 1.25em;
+            }
+
+            a {
+                font-size: 1em;
+                padding: 0em;
+                margin: 0em;
+            }
+        }
+
+        .voice_actors_container {
+            width: 50%;
+
+            h3 {
+                font-size: 1.5em;
+            }
+
+            .voice_actor_display_style {
+                .voice_actor_details {
+                    h5 {
+                        font-size: 1.5em;
+                        padding: .25em;
+                    }
+
+                    a {
+                        font-size: 1em;
+                        margin: .25em;
+                        padding: 0em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .character_container_styles {
+        flex-direction: row;
+
+        .character_image_style {
+            width: 25%;
+        }
+
+        .character_details {
+            width: 30%;
+
+            span {
+                font-size: 1em;
+            }
+
+            a {
+                font-size: .9em;
+                padding: 0em;
+                margin: 0em;
+            }
+        }
+
+        .voice_actors_container {
+            width: 50%;
+
+            h3 {
+                font-size: 1.5em;
+            }
+
+            .voice_actor_display_style {
+                .voice_actor_details {
+                    h5 {
+                        font-size: 1.5em;
+                        padding: .25em;
+                    }
+
+                    a {
+                        font-size: 1em;
+                        margin: .25em;
+                        padding: 0em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .character_container_styles {
+        flex-direction: row;
+
+        .character_image_style {
+            width: 20%;
+        }
+
+        .character_details {
+            width: 30%;
+
+            span {
+                font-size: 1em;
+            }
+
+            h5 {
+                font-size: .75em;
+            }
+
+            p {
+                font-size: .75em;
+            }
+
+            a {
+                font-size: .5em;
+                padding: 0em;
+                margin: 0em;
+            }
+        }
+
+        .voice_actors_container {
+            width: 50%;
+
+            h3 {
+                font-size: 1em;
+            }
+
+            .voice_actor_display_style {
+                .voice_actor_details {
+                    h5 {
+                        font-size: 1em;
+                        padding: .25em;
+                    }
+
+                    a {
+                        font-size: .5em;
+                        margin: .25em;
+                        padding: 0em;
+                    }
                 }
             }
         }

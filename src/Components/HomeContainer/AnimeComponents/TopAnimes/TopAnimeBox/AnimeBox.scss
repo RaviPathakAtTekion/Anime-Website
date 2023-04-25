@@ -25,7 +25,7 @@
     display: flex;
     justify-content: space-evenly;
 
-    img{
+    img {
         padding: .5em;
         height: 99%;
         width: 50%;
@@ -90,12 +90,92 @@
         color: black;
     }
 
-    span{
+    span {
         background-color: rgb(248, 246, 246);
         box-shadow: 1px 1px 1px white;
         border: .5em;
         color: black;
         border-radius: .5em;
         margin: .5em;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .component_anime_style {
+        img {
+            border-radius: 2em;
+        }
+    }
+
+    .anime_info {
+        height: 70%;
+        align-self: center;
+        display: block;
+        overflow-x: scroll;
+
+        h4 {
+            font-size: 1.25em;
+        }
+
+        p {
+            font-size: 1em;
+        }
+    }
+
+    .component_anime_style {
+        img {
+            object-fit: contain;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .anime_info {
+        height: 70%;
+        align-self: center;
+        display: block;
+        overflow-x: scroll;
+
+        h4 {
+            font-size: 1em;
+        }
+
+        p {
+            font-size: .75em;
+        }
+    }
+
+    .component_anime_style {
+        img {
+            object-fit: contain;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .anime_box_style {
+        margin: -.5em;
+    }
+
+    .anime_info {
+        height: 70%;
+        align-self: center;
+        display: block;
+        overflow-x: scroll;
+
+        h4 {
+            font-size: 1.25em;
+        }
+
+        p {
+            font-size: 1em;
+        }
+    }
+
+    .component_anime_style {
+        img {
+            object-fit: contain;
+        }
     }
 }

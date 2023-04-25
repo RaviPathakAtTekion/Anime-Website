@@ -4,6 +4,30 @@
     margin-bottom: 2em;
 }
 
+@media only screen and (max-width: 480px) {
+    .animes_container {
+        margin: 0em;
+        margin-top: 13em;
+        margin-bottom: 2em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .animes_container {
+        margin: 0em;
+        margin-top: 13em;
+        margin-bottom: 2em;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .animes_container {
+        margin: 0em;
+        margin-top: 13em;
+        margin-bottom: 2em;
+    }
+}
+
 .specific_anime__container {
     color: #3291e4;
     padding: .5em;
@@ -37,7 +61,7 @@
     }
 }
 
-.top_animes_component_styles {
+.extra_animes_component_styles {
     margin-top: 2em;
     width: 100%;
     display: flex;
@@ -57,5 +81,13 @@
     &:hover {
         background-color: rgb(158, 156, 156);
         border-radius: 1em;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .extra_animes_component_styles{
+        flex-direction: column;
+        height: 65em;
+        width: 100%;
     }
 }

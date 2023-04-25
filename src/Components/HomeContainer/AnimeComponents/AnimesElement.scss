@@ -1,11 +1,18 @@
 .animes_container_style {
     width: 45%;
-    // display: flex;
-    // justify-content: center;
-    // flex-flow: row wrap;
-    // align-items: center;
     background-color: #1f2024;
     border-radius: 1em;
+}
+
+@media only screen and (max-width: 480px) {
+    .animes_container_style {
+        width: 100%;
+    }
+    .animes_title_style{
+        h4{
+            font-size: 1.25em;
+        }
+    }
 }
 
 .animes_title_style {
@@ -15,7 +22,7 @@
     flex-flow: row wrap;
     color: white;
 
-    svg{
+    svg {
         height: 2em;
         width: 2em;
         margin: .25em;

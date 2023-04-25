@@ -1,7 +1,7 @@
 .bigBox__style {
     padding: .5em;
     height: 90%;
-    width: 90%;
+    min-width: 21em;
     background-color: white;
     border-radius: 1em;
     padding: .5em;
@@ -47,5 +47,11 @@
         backdrop-filter: brightness(20%);
         border-radius: 1em;
         border: 5px solid white;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .bigBox__style{
+        min-width: 29em;
     }
 }

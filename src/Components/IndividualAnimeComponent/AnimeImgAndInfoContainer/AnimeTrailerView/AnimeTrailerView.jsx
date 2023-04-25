@@ -1,6 +1,6 @@
-import { useState } from "react";
-import "./AnimeTrailerView.scss";
+import { Fragment, useState } from "react";
 import ReactPlayer from "react-player/youtube";
+import "./AnimeTrailerView.scss";
 
 function AnimeTrailerView({ animeContent }) {
   const [mouseHover, setMouseHover] = useState(false);
@@ -16,27 +16,39 @@ function AnimeTrailerView({ animeContent }) {
       setMouseHover(false);
     }, 1000);
   };
+
   return (
-    <div
-      className="anime_image"
-      onMouseEnter={handleMouseHoverEnter}
-      onMouseLeave={handleMouseHoverLeave}
-    >
-      {mouseHover && animeContent?.trailer?.url ? (
-        <ReactPlayer
-          width={"50em"}
-          height={"38em"}
-          url={animeContent.trailer.url}
-          playing={true}
-          className="anime_video_style"
-        />
+    <Fragment>
+      {window.screen.width > 1024 ? (
+        <div
+          className="anime_image"
+          onMouseEnter={handleMouseHoverEnter}
+          onMouseLeave={handleMouseHoverLeave}
+        >
+          {mouseHover && animeContent?.trailer?.url ? (
+            <ReactPlayer
+              width={"50em"}
+              height={"38em"}
+              url={animeContent.trailer.url}
+              playing={true}
+              className="anime_video_style"
+            />
+          ) : (
+            <img
+              src={animeContent.images.webp.image_url}
+              alt={animeContent.title}
+            ></img>
+          )}
+        </div>
       ) : (
-        <img
-          src={animeContent.images.webp.image_url}
-          alt={animeContent.title}
-        ></img>
+        <div className="anime_image">
+          <img
+            src={animeContent.images.webp.image_url}
+            alt={animeContent.title}
+          ></img>
+        </div>
       )}
-    </div>
+    </Fragment>
   );
 
   // <video

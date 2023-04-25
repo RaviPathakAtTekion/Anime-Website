@@ -12,7 +12,7 @@ function AnimeComponent() {
   return (
     <div className="animes_container">
       <TopAiringAnimes />
-      <div className="top_animes_component_styles">
+      <div className="extra_animes_component_styles">
         <TopAnimes BsLaptop={BsLaptop} />
         <UpcomingAnimes MdOutlineUpcoming={MdOutlineUpcoming} />
       </div>

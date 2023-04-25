@@ -13,3 +13,27 @@
     padding: .5em;
     margin: .5em;
 }
+
+@media only screen and (max-width: 768px) {
+    .anime_extra_info_container{
+        width: 100%;
+        margin: 0em;
+        padding: 0em;
+        height: 50%;
+    }
+    .anime_production_segment{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .anime_extra_info_container{
+        width: 100%;
+        margin: 0em;
+        padding: 0em;
+        height: 50%;
+    }
+    .anime_production_segment{
+        width: 100%;
+    }
+}

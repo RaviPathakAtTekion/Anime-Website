@@ -6,55 +6,21 @@
 
 .anime_big_box_style {
     display: flex;
-    justify-content: space-around;
     align-items: center;
     height: 100%;
     width: 100%;
+    overflow-x: scroll;
 }
 
-.nav_button_style {
-    // background-color: lightslategrey;
-    border-radius: 1em;
-    height: 4em;
-    align-self: center;
-    position: absolute;
-    z-index: 1;
-    width: 4em;
-    margin: .5em;
-    cursor: pointer;
-    // box-shadow: 2px 2px 2px rgb(70, 69, 69);
-
-    &:hover {
-        background-color: rgb(181, 179, 179);
-        transform: scale(1.1);
-        transition: smooth;
+@media only screen and (max-width: 480px){
+    .anime_big_box_style{
+        width: 100%;
     }
 }
 
-.prev {
-    left: 0em;
-    top: 15em;
-}
-
-.next {
-    right: 0em;
-    top: 15em;
-}
-
-.component_rendering_style {
-    opacity: 0;
-}
-
-.component_rendering_style-active {
-    opacity: 1;
-    transition: opacity 500ms;
-}
-
-.component_rendering_style-exit {
-    opacity: 1;
-}
-
-.component_rendering_styleexit-active {
-    opacity: 0;
-    transition: opacity 500ms;
+.anime_scroll_message{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
 }

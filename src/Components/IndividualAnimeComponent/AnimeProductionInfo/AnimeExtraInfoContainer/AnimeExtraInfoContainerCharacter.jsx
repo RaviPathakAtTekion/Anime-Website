@@ -2,10 +2,10 @@ import { Fragment } from "react";
 // import { useEffect } from "react";
 import Characters from "../../Segretations/Characters.jsx";
 import ClassLoaderMini from "../../../ClassLoader/ClassLoaderMini.jsx";
-
-import "./AnimeExtraInfoContainer.scss";
 import { GetAnimeSpecificCharactersData } from "./AnimeSpecificDataFetcher.jsx";
 import ErrorMessage from "../../../ErrorOccurredComponent/ErrorMessage.jsx";
+
+import "./AnimeExtraInfoContainer.scss";
 
 function AnimeExtraInfoContainerCharacter({ animeId, type }) {
   const { charactersLoading, charactersData, charactersError } =

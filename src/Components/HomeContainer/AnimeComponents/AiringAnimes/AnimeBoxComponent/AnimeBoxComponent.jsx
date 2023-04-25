@@ -1,16 +1,12 @@
 import { useState } from "react";
-import { CSSTransition } from "react-transition-group";
+// import { CSSTransition } from "react-transition-group";
 import AnimeBigBox from "./AnimeBoxStyle/AnimeBigBox.jsx";
-import { GrFormNext } from "react-icons/gr";
-import { GrFormPrevious } from "react-icons/gr";
 
 import "./AnimeBoxComponent.scss";
 
 // anime box container component
 function AnimeBoxComponent({ animesDetails }) {
-
-  // page naviagtion and mouse hover status state
-  const [pageCount, setPageCount] = useState(5);
+  // mouse hover status state
   const [mouseHover, setMouseHover] = useState(false);
 
   // const [stateValue, setStateValue] = useState(false);
@@ -23,53 +19,22 @@ function AnimeBoxComponent({ animesDetails }) {
     setMouseHover(false);
   };
 
-  const handlePrevButton = () => {
-    // setStateValue(true);
-    setPageCount((prevPage) => {
-      return prevPage === 5 ? (prevPage = 25) : prevPage - 5;
-    });
-  };
-
-  const handleNextButton = () => {
-    // setStateValue(true);
-    setPageCount((prevPage) => {
-      return prevPage === 25 ? (prevPage = 5) : prevPage + 5;
-    });
-  };
-
   return (
     <div
       className="anime_big_box_container_style"
       onMouseOver={handleMouseHover}
       onMouseOut={handleMouseOut}
     >
-      {mouseHover && (
-        <GrFormPrevious
-          className="nav_button_style prev"
-          onClick={handlePrevButton}
-          title="previous button"
-        />
+      {mouseHover ? (
+        <h3 className="anime_scroll_message">Scroll to see more...</h3>
+      ) : (
+        ""
       )}
-      {/* <CSSTransition
-        in={stateValue}
-        timeout={200}
-        classNames={"component_rendering_style"}
-      > */}
       <div className="anime_big_box_style">
-        <AnimeBigBox animeDetail={animesDetails[pageCount - 5]} />
-        <AnimeBigBox animeDetail={animesDetails[pageCount - 4]} />
-        <AnimeBigBox animeDetail={animesDetails[pageCount - 3]} />
-        <AnimeBigBox animeDetail={animesDetails[pageCount - 2]} />
-        <AnimeBigBox animeDetail={animesDetails[pageCount - 1]} />
+        {animesDetails.map((anime) => (
+          <AnimeBigBox key={anime.mal_id} animeDetail={anime} />
+        ))}
       </div>
-      {/* </CSSTransition> */}
-      {mouseHover && (
-        <GrFormNext
-          className="nav_button_style next"
-          onClick={handleNextButton}
-          title="next button"
-        />
-      )}
     </div>
   );
 }

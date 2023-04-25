@@ -15,6 +15,32 @@
     }
 }
 
+.navItem__style_smaller {
+    padding: .5em;
+    margin: .5em;
+    font-size: 1em;
+    flex-grow: 1;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border: 1px solid transparent;
+
+    &:hover {
+        background-color: #3291e4;
+        border: 1px solid #349bf5;
+        color: black;
+        border-radius: .5em;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .navItem__style{
+        padding: 0.4em;
+        margin: 0em;
+        display: none;
+    }
+}
+
 .icons__style{
     display: inline-block;
     width: 3em;
@@ -22,6 +48,20 @@
     padding: 0;
     margin: 0;
     color: white;
+
+    :active{
+        color: black;
+    }
+}
+
+.icons__style_smaller{
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    padding: 0;
+    margin: .5em;
+    color: white;
+    font-size: .75em;
 
     :active{
         color: black;

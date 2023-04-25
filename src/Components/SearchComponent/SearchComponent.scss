@@ -1,5 +1,18 @@
 .search_container{
     padding: .5em;
     margin: 12em;
-    // height: 100em;
+}
+
+@media only screen and (max-width: 768px){
+    .search_container{
+        margin: 0em;
+        margin-top: 12em;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .search_container{
+        margin: 0em;
+        margin-top: 12em;
+    }
 }

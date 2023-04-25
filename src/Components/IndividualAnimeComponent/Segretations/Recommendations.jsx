@@ -1,5 +1,5 @@
-import "../AnimeExtraInfo.scss";
 import RecommendationsElements from "./Elements/RecommendationsElements";
+import "../AnimeExtraInfo.scss";
 
 function Recommendations({ recommendations }) {
   

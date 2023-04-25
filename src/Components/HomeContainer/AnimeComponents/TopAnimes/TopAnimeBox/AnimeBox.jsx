@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-
+import { useState } from "react";
 import AnimeBoxComponent from "./TopAnimeComponent/AnimeComponent.jsx";
 import { PrevButton, NextButton } from "../../../../../assets/navItems.js";
 import "./AnimeBox.scss";

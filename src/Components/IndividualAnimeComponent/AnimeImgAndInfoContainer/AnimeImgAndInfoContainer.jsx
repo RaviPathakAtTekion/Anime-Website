@@ -1,8 +1,8 @@
-import "./AnimeImgAndInfoContainer.scss";
 import AnimeSummary from "./AnimeRating/AnimeSummary/AnimeSummary";
 import AnimeRating from "./AnimeRating/AnimeRating";
 import AnimeTrailerView from "./AnimeTrailerView/AnimeTrailerView.jsx";
 
+import "./AnimeImgAndInfoContainer.scss";
 function AnimeImgAndInfoContainer({ animeContent }) {
 
   return (

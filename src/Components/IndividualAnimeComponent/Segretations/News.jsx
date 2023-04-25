@@ -1,5 +1,5 @@
-import "../AnimeExtraInfo.scss";
 import NewsElements from "./Elements/NewsElements";
+import "../AnimeExtraInfo.scss";
 
 function News({ news }) {
 

@@ -2,10 +2,9 @@ import { useLocation } from "react-router-dom";
 import { Fragment} from "react";
 import AnimeImgAndInfoContainer from "./AnimeImgAndInfoContainer/AnimeImgAndInfoContainer.jsx";
 import AnimeProductionInfo from "./AnimeProductionInfo/AnimeProductionInfo.jsx";
-
-import "./IndividualAnimeComponent.scss";
 import Header from "../HomeContainer/HeaderItems/Header.jsx";
 import Footer from "../Footer/Footer.jsx";
+import "./IndividualAnimeComponent.scss";
 
 function IndividualAnimeComponent() {
   const location = useLocation();

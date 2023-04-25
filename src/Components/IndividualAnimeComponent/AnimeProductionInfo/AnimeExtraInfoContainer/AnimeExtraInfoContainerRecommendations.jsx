@@ -2,9 +2,9 @@ import { Fragment } from "react";
 import Recommendations from "../../Segretations/Recommendations.jsx";
 import ClassLoaderMini from "../../../ClassLoader/ClassLoaderMini.jsx";
 import { GetAnimeSpecificRecommendationsData } from "./AnimeSpecificDataFetcher.jsx";
+import ErrorMessage from "../../../ErrorOccurredComponent/ErrorMessage.jsx";
 
 import "./AnimeExtraInfoContainer.scss";
-import ErrorMessage from "../../../ErrorOccurredComponent/ErrorMessage.jsx";
 
 function AnimeExtraInfoContainerRecommendations({ animeId, delay, type }) {
   const { recommendationsLoading, recommendationsData, recommendationsError } =

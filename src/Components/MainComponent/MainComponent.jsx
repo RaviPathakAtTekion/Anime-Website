@@ -6,9 +6,9 @@ import ClassLoaderMini from "../ClassLoader/ClassLoaderMini";
 import ClassLoaderMajor from "../ClassLoader/ClassLoaderMajor";
 import GenresData from "./GenresData";
 import AnimeApiCallByType from "./AnimeApiCallByType";
+import ErrorMessage from "../ErrorOccurredComponent/ErrorMessage";
 
 import "./MainComponent.scss";
-import ErrorMessage from "../ErrorOccurredComponent/ErrorMessage";
 
 function MainComponent({ DetailsAPI, type, apiType }) {
   const [currentPage, setCurrentPage] = useState(1);

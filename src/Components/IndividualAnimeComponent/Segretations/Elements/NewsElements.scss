@@ -18,8 +18,6 @@
         img {
             height: 100%;
             object-fit: contain;
-            // border-radius: 1em;
-            // border: 1px solid white;
         }
 
         &:hover{
@@ -61,6 +59,28 @@
 
         .forum_link{
             color: rgb(17, 142, 188);
+        }
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .newsItem_container {
+        height: 13em;
+        width: 98%;
+        .anime_news_details{
+            width: 60%;
+
+            span{
+                font-size: 1em;
+            }
+    
+            h5{
+                font-size: .9em;
+            }
+    
+            p{
+                font-size: .75em;
+            }
         }
     }
 }

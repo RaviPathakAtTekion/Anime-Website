@@ -5,7 +5,7 @@ function BigThreeContainerElementsBox({ animeData }) {
   const navigate = useNavigate();
 
   const handleNavigationToAnime = (anime) => {
-    navigate(`/anime/${anime.mali_id}`, {
+    navigate(`/anime/${anime.mal_id}`, {
       state: { content: anime, type: "anime" },
     });
   };
@@ -44,7 +44,7 @@ function BigThreeContainerElementsBox({ animeData }) {
               <span>Score - </span> {animeData.score}
             </p>
             <div className="bigThree_details_innerContainer_parts">
-              <p>
+              <p className="synopsis_class">
                 <span>Synopsis - </span> {animeData.synopsis}
               </p>
             </div>

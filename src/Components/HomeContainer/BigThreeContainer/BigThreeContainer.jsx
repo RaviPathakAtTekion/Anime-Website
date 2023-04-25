@@ -4,9 +4,9 @@ import ClassLoaderMini from "../../ClassLoader/ClassLoaderMini.jsx";
 import getData from "./BigThreeDataFetcher.jsx";
 import { GrFormNext } from "react-icons/gr";
 import { GrFormPrevious } from "react-icons/gr";
+import ErrorMessage from "../../ErrorOccurredComponent/ErrorMessage.jsx";
 
 import "./BigThreeContainer.scss";
-import ErrorMessage from "../../ErrorOccurredComponent/ErrorMessage.jsx";
 
 function BigThreeContainer() {
   const [animeIndex, setAnimeIndex] = useState(1);

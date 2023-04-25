@@ -1,7 +1,11 @@
-.access--application__styles{
+.access--application__styles_bigger{
     padding: .5em;
     margin: .5em;
 }
+
+// .access--application__styles_smaller{
+//     display: none;
+// }
 
 .auth--button__style{
     font-size: 1.25em;
@@ -19,6 +23,25 @@
         border: 1px solid rgb(65, 110, 120);
     }
 }
+
+@media only screen and (max-width: 480px){
+    .access--application__styles_bigger{
+        display: none;
+    }
+    // .access--application__styles_smaller{
+    //     display: none;
+
+    //     .auth--button__style{
+    //         font-size: 1em;
+    //         padding: .25em;
+    //         margin: .5em;
+    //     }
+    // }
+}
+
+// .smaller_screen_auth_buttons{
+
+// }
 
 .userData_style{
     background-color: #3291e4;

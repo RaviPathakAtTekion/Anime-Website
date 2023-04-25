@@ -1,9 +1,7 @@
 import { Fragment, useState } from "react";
-import { lazy } from "react";
 import { PrevButton, NextButton } from "../../../assets/navItems";
-import "../AnimeExtraInfo.scss";
-// const CharactersElements = lazy(() => import("./Elements/CharactersElements.jsx"))
 import CharactersElements from "./Elements/CharactersElements";
+import "../AnimeExtraInfo.scss";
 
 function Characters({ characters }) {
   const [currentCharacter, setCurrentCharacter] = useState(0);

@@ -42,3 +42,27 @@
         color: white;
     }
 }
+
+@media only screen and (max-width: 768px){
+    .no_data_container{
+        h2{
+            font-size: 1.25em;
+        }
+    }
+    .toggle_content_button_container{
+        height: 2em;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .no_data_container{
+        h2{
+            font-size: 1em;
+        }
+    }
+    .toggle_content_button_container{
+        height: 2em;
+        justify-content: center;
+    }
+}

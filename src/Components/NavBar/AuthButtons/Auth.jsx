@@ -3,10 +3,12 @@ import { NavLink } from "react-router-dom";
 
 import "./Auth.scss";
 
-function Auth({userDetails}) {
+function Auth({userDetails, size = "bigger"}) {
+
+  const classNames = `access--application__styles_${size}`;
 
   return (
-    <div className="access--application__styles">
+    <div className={classNames}>
       {userDetails === null ? 
       <Fragment>
       <NavLink to="/login">

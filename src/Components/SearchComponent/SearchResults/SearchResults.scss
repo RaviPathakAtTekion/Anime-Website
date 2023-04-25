@@ -16,7 +16,7 @@
     background-color: rgb(173, 168, 168);
     cursor: pointer;
 
-    &:hover{
+    &:hover {
         filter: brightness(80%);
     }
 
@@ -26,7 +26,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        
+
         .search_content_image {
             height: 99%;
             margin: .25em;
@@ -44,14 +44,82 @@
             }
         }
 
-        .search_anime_details{
+        .search_anime_details {
             padding: .25em;
             margin: .25em;
             width: 50%;
             font-weight: bold;
 
-            h5{
+            h5 {
                 font-size: 1.25em;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .search_items_container {
+        width: 95%;
+    }
+
+    .search_each_item_container{
+        width: 98%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .search_items_container {
+        width: 95%;
+    }
+
+    .search_each_item_container {
+        width: 96%;
+        height: 12em;
+
+        .each_item_inner_style {
+
+            .search_content_image {
+                width: 30%;
+            }
+
+            .search_anime_details {
+                padding: .25em;
+                margin: .25em;
+                width: 65%;
+                font-weight: bold;
+
+                h5 {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 319px) {
+    .search_items_container {
+        width: 95%;
+    }
+
+    .search_each_item_container {
+        width: 95%;
+        height: 15em;
+
+        .each_item_inner_style {
+
+            .search_content_image {
+                width: 30%;
+            }
+
+            .search_anime_details {
+                padding: .25em;
+                margin: .25em;
+                width: 60%;
+                font-weight: bold;
+
+                h5 {
+                    font-size: 1em;
+                }
             }
         }
     }

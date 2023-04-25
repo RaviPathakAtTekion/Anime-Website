@@ -90,3 +90,11 @@
         transform: scale(1.5);
     }
 }
+
+@media only screen and (max-width: 480px){
+    .navContent_button_style{
+        height: 2em;
+        width: 2em;
+        border-radius: 1em;
+    }
+}
