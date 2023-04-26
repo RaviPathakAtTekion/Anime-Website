@@ -17,6 +17,17 @@
     }
 }
 
+@media only screen and (max-width: 1024px){
+    .anime_summary{
+        h3{
+            font-size: 1.5em;
+        }
+        p{
+            font-size: .9em;
+        }
+    }
+}
+
 @media only screen and (max-width: 768px){
     .anime_summary{
         h3{

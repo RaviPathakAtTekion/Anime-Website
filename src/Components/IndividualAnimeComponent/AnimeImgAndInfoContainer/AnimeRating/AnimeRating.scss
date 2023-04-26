@@ -50,6 +50,24 @@
     }
 }
 
+@media only screen and (max-width: 1024px) {
+    .anime-basic_details{
+        height: 50%;
+    }
+    .anime_details_style {
+
+        span {
+            font-size: 1.25em;
+            margin: .40em;
+        }
+
+        p {
+            margin: .40em;
+            font-size: 1em;
+        }
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .anime-basic_details{
         height: 80%;

@@ -108,3 +108,101 @@
 
   }
 }
+
+@media only screen and (max-width: 1024px){
+  .login--title__style{
+    font-size: 1.75em;
+    left: 45%;
+  }
+  .form__style{
+    margin: 2em;
+    margin-top: 12em;
+    width: 94%;
+    padding: 1em;
+
+    .form__title{
+      font-size: 2em;
+      text-align: center;
+    }
+
+    .login__form__input {
+      font-size: 1.5em;
+      width: 60%;
+    }
+
+    .forgot__passeord__style {
+      font-size: 1.5em;
+    }
+
+    .login--submit--button{
+      font-size: 1.5em;
+      padding: .5em;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .login--title__style{
+    font-size: 1.75em;
+    left: 40%;
+  }
+  .form__style{
+    margin: 2em;
+    margin-top: 10em;
+    width: 94%;
+    padding: 1em;
+
+    .form__title{
+      font-size: 1.75em;
+      text-align: center;
+    }
+
+    .login__form__input {
+      font-size: 1.25em;
+      width: 65%;
+    }
+
+    .forgot__passeord__style {
+      font-size: 1.25em;
+    }
+
+    .login--submit--button{
+      font-size: 1.5em;
+      padding: .5em;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px){
+  .login--title__style{
+    font-size: 1.5em;
+    left: 35%;
+  }
+  .fix_margin_top{
+    margin-top: 0em;
+  }
+
+  .form__style{
+    margin: 1em;
+    margin-top: 5em;
+    width: 95%;
+    padding: 1em;
+
+    .form__title{
+      font-size: 1.5em;
+    }
+
+    .login__form__input {
+      font-size: 1em;
+      width: 75%;
+    }
+
+    .forgot__passeord__style {
+      font-size: 1em;
+    }
+
+    .login--submit--button{
+      font-size: 1em;
+    }
+  }
+}

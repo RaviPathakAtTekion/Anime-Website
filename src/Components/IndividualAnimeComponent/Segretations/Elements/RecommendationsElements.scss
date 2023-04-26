@@ -59,6 +59,29 @@
     }
 }
 
+@media only screen and (max-width: 1024px){
+    .recommended_animes_container{
+        height: 99%;
+        margin-top: .5em;
+
+        .recommended_anime_image_container{
+            width: 16em;
+        }
+
+        .overlay_anime_data{
+            h5 {
+                font-size: 1em;
+                padding: .5em;
+            }
+    
+            p {
+                font-size: .75em;
+                padding: .5em;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 768px){
     .recommended_animes_container{
         height: 100%;

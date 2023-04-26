@@ -18,12 +18,12 @@ function AnimeExtraInfoContainerNews({ animeId, type }) {
         <div className="anime_extra_info_segment_parts">
           <News news={newsData} />
         </div>
-      ) : newsError !== null ? (
-        <ErrorMessage />
+      ) : newsLoading ? (
+        <ClassLoaderMini />
       ) : newsData.length === 0 ? (
         ""
       ) : (
-        <ClassLoaderMini />
+        <ErrorMessage />
       )}
     </Fragment>
   );

@@ -1,13 +1,9 @@
-.access--application__styles_bigger{
+.access--application__styles {
     padding: .5em;
     margin: .5em;
 }
 
-// .access--application__styles_smaller{
-//     display: none;
-// }
-
-.auth--button__style{
+.auth--button__style {
     font-size: 1.25em;
     color: white;
     border: 1px solid black;
@@ -16,7 +12,7 @@
     margin: 0em 2em;
     font-weight: bold;
 
-    &:hover{
+    &:hover {
         background-color: #3291e4;
         border-radius: .5em;
         color: black;
@@ -24,26 +20,26 @@
     }
 }
 
-@media only screen and (max-width: 480px){
-    .access--application__styles_bigger{
-        display: none;
+@media only screen and (max-width: 500px) {
+    .access--application__styles {
+        flex-direction: column;
+        padding: .25em;
+        align-items: center;
+        justify-content: center;
+        padding: .5em;
+        margin: .5em;
     }
-    // .access--application__styles_smaller{
-    //     display: none;
 
-    //     .auth--button__style{
-    //         font-size: 1em;
-    //         padding: .25em;
-    //         margin: .5em;
-    //     }
-    // }
+    .auth--button__style {
+        margin: .5em;
+        align-items: center;
+        display: flex;
+        font-size: 1em;
+        padding: .5em;
+    }
 }
 
-// .smaller_screen_auth_buttons{
-
-// }
-
-.userData_style{
+.userData_style {
     background-color: #3291e4;
     border: 2px solid black;
     border-radius: .5em;

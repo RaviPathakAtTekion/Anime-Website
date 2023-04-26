@@ -29,6 +29,18 @@
 //     }
 // }
 
+@media only screen and (max-width: 1024px){
+    .anime_image{
+        width: 35%;
+        align-self: center;
+        
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
 @media only screen and (max-width: 768px){
     .anime_image{
         width: 50%;

@@ -19,12 +19,12 @@ function AnimeExtraInfoContainerCharacter({ animeId, type }) {
         <div className="anime_extra_info_segment_parts">
           <Characters characters={charactersData} />
         </div>
-      ) : charactersError !== null ? (
-        <ErrorMessage />
+      ) : charactersLoading ? (
+        <ClassLoaderMini />
       ) : charactersData.length === 0 ? (
         ""
       ) : (
-        <ClassLoaderMini />
+        <ErrorMessage />
       )}
     </Fragment>
   );

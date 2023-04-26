@@ -2,9 +2,9 @@ import axios from "axios";
 import { useState, useEffect, Fragment } from "react";
 import { BASE_ANIME_API, currentDay } from "../../assets/navItems";
 import ScheduleAnimes from "./ScheduleAnimes/ScheduleAnimes";
+import ClassLoaderMini from "../ClassLoader/ClassLoaderMini";
 
 import "./SchedulesContainer.scss";
-import ClassLoaderMini from "../ClassLoader/ClassLoaderMini";
 
 function SchedulesContainer() {
   const [scheduleAnime, setScheduleAnime] = useState({ state: "pending" });

@@ -9,7 +9,7 @@ import "./AnimeExtraInfoContainer.scss";
 function AnimeExtraInfoContainerRecommendations({ animeId, delay, type }) {
   const { recommendationsLoading, recommendationsData, recommendationsError } =
     GetAnimeSpecificRecommendationsData(animeId, type);
-    
+
   return (
     <Fragment>
       {recommendationsError === null &&
@@ -18,12 +18,12 @@ function AnimeExtraInfoContainerRecommendations({ animeId, delay, type }) {
         <div className="anime_extra_info_segment_parts">
           <Recommendations recommendations={recommendationsData} />
         </div>
-      ) : recommendationsError !== null ? (
-        <ErrorMessage />
+      ) : recommendationsLoading ? (
+        <ClassLoaderMini />
       ) : recommendationsData.length === 0 ? (
         ""
       ) : (
-        <ClassLoaderMini />
+        <ErrorMessage />
       )}
     </Fragment>
   );

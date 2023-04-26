@@ -7,10 +7,16 @@
     background-color: rgb(230, 221, 221);
 }
 
+@media only screen and (max-width: 1024px){
+    .anime_extra_info_segment_parts{
+        margin: .5em;
+        height: 25em;
+    }
+}
+
 @media only screen and (max-width: 768px){
     .anime_extra_info_segment_parts{
         margin: .5em;
-        height: 50%;
         height: 22em;
     }
 }
@@ -18,7 +24,6 @@
 @media only screen and (max-width: 480px){
     .anime_extra_info_segment_parts{
         margin: .5em;
-        height: 50%;
         height: 15em;
     }
 }

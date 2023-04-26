@@ -30,7 +30,12 @@
         height: 99%;
         width: 50%;
         object-fit: cover;
-        border-radius: 1em;
+        border-radius: 2em;
+
+        &:hover{
+            cursor: pointer;
+            filter: brightness(70%);
+        }
     }
 }
 

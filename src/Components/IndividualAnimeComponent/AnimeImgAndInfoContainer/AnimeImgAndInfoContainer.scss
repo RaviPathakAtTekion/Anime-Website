@@ -15,6 +15,17 @@
     border-radius: 1em;
 }
 
+@media only screen and (max-width: 1024px){
+    .anime_image_anime_info_container{
+        width: 100%;
+        flex-direction: row;
+        height: 50%;
+    }
+    .anime_info_page{
+        width: 50%;
+    }
+}
+
 @media only screen and (max-width: 768px){
     .anime_image_anime_info_container{
         width: 100%;

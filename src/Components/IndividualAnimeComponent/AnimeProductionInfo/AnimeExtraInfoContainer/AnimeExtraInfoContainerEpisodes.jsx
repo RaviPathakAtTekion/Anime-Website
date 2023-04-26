@@ -55,10 +55,10 @@ function AnimeExtraInfoContainerEpisodes({ animeId, type }) {
         ) : (
           ""
         )
-      ) : episodesError === null ? (
-        <ErrorMessage />
-      ) : (
+      ) : episodesLoading ? (
         <ClassLoaderMini />
+      ) : (
+        <ErrorMessage />
       )}
     </Fragment>
   );
